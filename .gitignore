@@ -1,0 +1,19 @@
+# node
+node_modules
+npm-debug.log
+yarn.lock
+
+# env files
+.env
+.env.local
+
+# next.js
+.next
+out
+
+# logs
+logs
+*.log
+
+# OS
+.DS_Store
