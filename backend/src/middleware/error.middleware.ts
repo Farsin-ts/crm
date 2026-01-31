@@ -8,8 +8,10 @@ export class AppError extends Error {
     super(message);
     this.statusCode = statusCode;
     this.name = 'AppError';
-    // Optional: maintain stack trace in Node.js
-    Error.captureStackTrace?.(this, this.constructor);
+    if (Error.captureStackTrace) {
+  Error.captureStackTrace(this, this.constructor);
+}
+
   }
 }
 
