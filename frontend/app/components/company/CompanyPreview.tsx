@@ -65,7 +65,7 @@ export default function CompanyPreview() {
           <p className="font-medium text-gray-600">04/11/2024</p>
           <p className="font-semibold text-blue-500">Follow-up call</p>
           <p className="font-medium text-gray-600">01/11/2024</p>
-          <p className="font-semibold text-blue-500">Quote for 45 components</p>
+          <p className="font-semibold text-blue-500">Quote for 45</p>
           <p className="font-medium text-gray-600">23/09/2024</p>
           <p className="font-semibold text-blue-500">Prospect meeting</p>
           <p className="font-medium text-gray-600">22/09/2024</p>
