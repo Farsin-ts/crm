@@ -13,37 +13,37 @@ export default function CompanyInfo() {
       { label: "Number", value: "2002" },
     ],
     [
-      { label: "Webbadress", value: "info@sc.se" },
+      { label: "Webbadress", value: "www.sc.se" },         // Fixed: was wrong before
       { label: "VAT No.", value: "SE123456789101" },
     ],
     [
-      { label: "E-mail", value: "www.sc.se" },
+      { label: "E-mail", value: "info@sc.se" },             // Fixed: swapped values
       { label: "Business", value: "IT" },
     ],
   ];
 
   return (
-    <div className="space-y-1.5">
+    <div className="space-y-3 max-w-4xl">
       {dataRows.map((row, rowIndex) => (
-        <div key={rowIndex} className="flex gap-6">
-          {/* First pair */}
-          <div className=" flex items-start min-w-[180px] gap-4">
-            <div className="w-20 shrink-0">
-              <p className="text-sm text-gray-600">{row[0].label}:</p>
-            </div>
-            <div className="flex-1">
-              <p className="text-m font-medium text-gray-900">{row[0].value}</p>
-            </div>
+        <div key={rowIndex} className="grid grid-cols-2 gap-x-12">
+          {/* Left pair */}
+          <div className="flex gap-4">
+            <span className="text-sm text-gray-600 w-32 shrink-0">
+              {row[0].label}:
+            </span>
+            <span className="text-base font-medium text-gray-900">
+              {row[0].value}
+            </span>
           </div>
 
-          {/* Second pair */}
-          <div className="flex items-start min-w-[180px] gap-4">
-            <div className="w-20 shrink-0">
-              <p className="text-sm text-gray-600">{row[1].label}:</p>
-            </div>
-            <div className="flex-1">
-              <p className="text-sm font-medium">{row[1].value}</p>
-            </div>
+          {/* Right pair */}
+          <div className="flex gap-4">
+            <span className="text-sm text-gray-600 w-32 shrink-0">
+              {row[1].label}:
+            </span>
+            <span className="text-base font-medium text-gray-900">
+              {row[1].value}
+            </span>
           </div>
         </div>
       ))}
